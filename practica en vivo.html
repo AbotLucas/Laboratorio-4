@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Los 'name' de los input de formularios, son importantes para luego con php o js reconocer los datos -->
+    <!-- Generamos un formulario donde tendremos distintos metodos de recoleccion de informacion -->
+    <!-- El metodo de envio post los datos se envian de manera oculta, de modo get estos se envian de manera visible -->
+    <form method="POST">
+        <div>
+            <!-- Un label es como un nombre, se lo asignamos con sentencia For al id
+                 y nos permite que al clickearlo enviarnos a el campo a llenar -->
+            <label for="name"><b>Nombre</b></label>  
+            <!-- Primer input del form, tipo 'text', donde podremos ingresar un texto
+                    El id nos sirve para relacionarlo con css o labels y el valu aparecera en la casilla x default -->
+            <input type="text" name="name" id="name" value="Ingrese su nombre aqui">
+        </div>
+
+        <div>
+            <label for="email"><b>Email</b></laberl>
+            <!-- input de tipo 'email' solo nos permite ingresar texto con formato de mail -->
+            <input type="email" name="email" id="email" value="Ingrese su mail aqui"/>
+        </div>
+
+        <div>
+            <!-- input de tipo 'pass' ocultara el texto ingresado en la casilla -->
+            <label for="pass"><b>Password</b></label>
+            <input type="password" name="pass" id="pass"/>
+        </div>
+
+        <br/>
+        <!-- El 'fieldset' nos formara un recuadro para lo que coloquemos dentro -->
+        <fieldset>
+            <legend>Sexo</legend> <!-- especie de titulo de 'fieldset' -->
+            <!-- Input de tipo 'radio' forma un casillero circular que podemos marcar o desmarcar, pero solo una opcion-->
+            <input type="radio" name="sexo" value="m" id="masculino" />
+            <label for="masculino">Masculino</label>
+            <!-- Para que esten relacionados deben tener el mismo name (En este caso "Sexo") -->
+            <input type="radio" name="sexo" value="f" id="femenino" />
+            <label for="femenino">Femenino</label>
+            <!-- Aca los labels nos sirven para que al presionar se marque el casillero -->
+        </fieldset>
+
+        <br/>
+
+        <fieldset>
+            <legend>Hobbies</legend>
+            <!-- Input de tipo 'checkbox' funciona similar a los inputs 'radio' pero solo nos permite marcar un casillero -->
+            <input type="checkbox" name="hobbie" value="Lectura" id="lectura" />
+            <label for="lectura">Lectura</label>
+            <!-- los labels nos dan la misma funcionalidad que con los radio -->
+            <input type="checkbox" name="hobbie" value="Deporte" id="deporte" />
+            <label for="deporte">Deporte</label>
+            
+            <input type="checkbox" name="hobbie" value="Turismo" id="turismo" />
+            <label for="turismo">Lectura</label>
+        </fieldset>
+
+        <br/>
+
+        <div>
+            <label for="team"><b>Equipo: </b></label>
+            <!-- Formulario 'select' nos da una lista desplegable con cada una de las opciones etiquetadas con 'option' -->
+            <select name="team">
+                <!-- 'disable_selected supone no permitir enviar la opcion sentenciada' -->
+                <option value="" disable_selected>--Seleccione un equipo--</option>
+                <option value="casla">San Lorenzo</option>
+                <option value="cabj">Boca</option>
+                <option value="carp">River</option>
+            </select>
+        </div>
+
+        <br/>
+
+        <div>
+            <label for="equipo">Equipo: </label>
+            <select name="equipo" multiple>
+                <!-- cuando el 'select' es de tipo 'multiple' en vez de ser una lista desplegable
+                        se convierte en una lista navegable -->
+                <option value="" disable_selected>--Seleccione un equipo--</option>
+                <option value="casla">San Lorenzo</option>
+                <option value="cabj">Boca</option>
+                <option value="carp">River</option>
+                <option value="vele">Velez</option>
+            </select>
+        </div>
+
+        <br>
+
+        <div>
+            <label for="edad"><b>Que edad tenes?</b></label>
+            <input list="listedad" name="inputedad" id="inputedad">
+            <!-- las datalist relacionadas a un input list, nos permiten ofrecer un menu desplegable con opciones
+                    pero tambien ingresar datos que no pertenecen a esa lista -->
+            <datalist id="listedad">
+                <option value="20"></option>
+                <option value="30"></option>
+                <option value="40"></option>
+            </datalist>
+        </div>
+
+        <br>
+
+        <div>
+            <!-- Los formularios 'textarea' nos sirven para ingresar cadenas de caracteres con espacios -->
+            <label for="texto1"><b>Text Area</b></label>
+            <textarea name="texto1" id="texto1" cols="30" rows="10">
+
+            </textarea>
+
+        </div>
+
+        <br>
+
+        <!-- El boton normal sin darle logica no funciona de nada -->
+        <button type="button">Botton Normal</button>
+        <!-- el input type button simula un boton normal -->
+        <input type="button" value="Botton Normal" />
+        <!-- el input type reset resetea los campos del formulario, se presenta como boton -->
+        <input type="reset" value="Limpiar" />
+        <!-- el input type submit envia los datos del formularo a un formhandler -->
+        <input type="submit" value="Enviar" />
+
+        <!-- Los datos de un formulario son enviados a travez de HTTP, dependiendo de como armemos el formulario
+            se definira el destino de estos datos -->
+        
+
+
+    </form>
+    
+</body>
+</html>
