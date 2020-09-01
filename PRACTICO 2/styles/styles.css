@@ -1,0 +1,48 @@
+* {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  }
+
+.wrapper {
+  width: 90%;
+  margin: auto;
+  padding: 0;
+  max-width: 1000px;
+}
+
+body {
+  background: #9b9b9b;;
+}
+
+.container {
+  background-color: rgb(92, 85, 85);
+  border: 2px solid black;
+}
+
+header {
+  height: 60px;
+}
+
+nav {
+  height: 30px;
+}
+
+aside {
+  width: calc(30% - 20px);
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+
+section {
+  width: 70%;
+  height: 200px;
+  float: right;
+}
+
+footer {
+  clear: both;
+  height: 40px;
+}
