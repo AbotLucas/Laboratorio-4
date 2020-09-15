@@ -9,13 +9,6 @@
     }
     
 
- /*    if(is_numeric($parameters["name"])) {
-        header("Location:".$_SERVER["HTTP_REFERER"]);
-    }
-    if(empty($parameters["name"])||empty($parameters["age"]||empty($_POST["sex"]))) {
-        header("Location:".$_SERVER["HTTP_REFERER"]);
-    } */
-
 ?>
 
 <table summary="La persona cargada">
