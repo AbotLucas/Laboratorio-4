@@ -4,40 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="baseStyle.css">
 </head>
 <body>
-    <div class="wrapper">
-         
-        <header class="container">
-                   <b>TP 2 LAB 4 (Header)</b>
-        </header>
-      
-        <nav class="container">ES UN NAV</nav>
-   
-            <aside class="container"><h3>Aside</h3></aside>
-             <section class="container">ES UN SECTION
-                  <article><h2>Article</h2> 
-                    <details>
-                        Summary
-                        <summary>
-                            Details
-                        </summary>
-                    </details>
-                 </article>
-                 <article><h2>Article</h2> 
-                    <details>
-                        Summary
-                        <summary>
-                            Details
-                        </summary>
-                    </details>
-                 </article>
-               </section>
 
-             <footer class="container">
-              Este es el footer
-          </footer>
-    </div>  
+    <div>
+    <form action="action.php" method="POST">
+        <h1>Contact Form</h1>
+
+                <h2>Your basic info</h2>
+
+                <label for="name">Name</label>
+
+                <br>
+
+                <input type="text" name="name" id="name">
+
+                <br>
+
+                <label for="mail">Mail</label>
+
+                <br>
+                <input type="mail" name="mail" id="mail">
+
+                <br>
+
+                <label for="birthday">Birthday</label>
+                
+                <br>
+               
+                <input type="date" name="birthday" id="birthday">
+
+                <br>
+
+                <label for="sex">Sex:</label>
+                <br>
+                    <input type="radio" name="sex" value="m" id="masc">
+                    <label for="masc" class="radio">Masculino</label>
+                    <input type="radio" name="sex" value="f" id="fem">
+                    <label for="fem" class="radio">Femenino</label>
+  
+
+                <br>
+                <br>
+
+
+                <h2>Your profile</h2>
+
+                <label for="you">About you</label>
+
+                <br>
+
+               <textarea name="you" id="you" cols="30" rows="10"></textarea>
+
+
+               <br>
+
+
+                <label for="role">Role</label>
+                <select name="role" id="role">
+                    <option value="front">Front-End Developer</option>
+                    <option value="back">Back-End Developer</option>
+                    <option value="fullstack">Full-Stack Developer</option>
+                </select>
+
+
+                <br>
+
+                <label for="interest">Interests:</label>
+
+                <br>
+
+                <input type="checkbox" name="interest"  id="interest">Data Base
+                <input type="checkbox" name="interest"  id="design">Design
+                <input type="checkbox" name="interest"  id="business">Business
+                <input type="checkbox" name="interest"  id="webdevelopment"> Web Development
+                <input type="checkbox" name="interest"  id="clouddevelopment">Cloud Development
+
+
+
+
+        </ol>
+
+        <br>
+        <br>
+
+        <div>
+        <button type="reset" class="button">Reset</button>
+        <button type="submit" class="button">Send</button>
+        </div>
+
+
+    </form>
+    
+    <br>
+    </div>
+
+    
 </body>
 </html>
